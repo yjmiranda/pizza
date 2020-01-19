@@ -1,0 +1,24 @@
+{
+  "name": "pizza",
+  "version": "1.0.0",
+  "description": "An app for logging pizzas of different types.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjmiranda/pizza.git"
+  },
+  "author": "Yali Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yjmiranda/pizza/issues"
+  },
+  "homepage": "https://github.com/yjmiranda/pizza#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
