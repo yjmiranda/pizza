@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row justify-content-around mx-1">
+
+        <div class="col-12 col-lg-11 jumbotron bg-dark text-white text-center mt-3">
+            <h1 class="display-4"><i class="fas fa-pizza-slice mr-1"></i>Grab A Slice!</h1>
+        </div>
+
+        <div class="col-12 col-lg-5 bg-dark rounded">
+            <h2 class="text-center text-white py-2">Slices Grabbed</h2>
+            <div class="container">
+                <div class="row">
+                    {{#each pizzas}}
+                        {{#unless devoured}}
+                        <div class="col-12 col-xl-6 mb-4">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">{{pizza_name}}</h3>
+                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{devoured}}>
+                                        <i class="fas fa-pizza-slice mr-1"></i>Devour!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-5 bg-dark pb-3 rounded">
+            <h2 class="text-center text-white py-2">Slices Eaten</h2>
+            <div class="container">
+                <div class="row">
+                    {{#each pizzas}}
+                        {{#if devoured}}
+                        <div class="col-12 col-xl-6 mb-4">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">{{pizza_name}}</h3>
+                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{devoured}}>
+                                        <i class="fas fa-utensils mr-1"></i>Grab Another Slice!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

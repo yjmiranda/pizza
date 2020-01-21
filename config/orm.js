@@ -1,4 +1,4 @@
-const connection = require("./connection.js");
+const connection = require("../config/connection.js");
 
 var orm = {
     selectAll: function(tableName, cb){

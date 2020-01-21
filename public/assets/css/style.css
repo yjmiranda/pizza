@@ -1,0 +1,9 @@
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-image: url("../images/pexels-photo-1653877.jpeg");
+    background-size: cover;
+}
