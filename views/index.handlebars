@@ -6,7 +6,7 @@
         </div>
 
         <div class="col-12 col-lg-5 bg-dark rounded">
-            <h2 class="text-center text-white py-2">Slices Grabbed</h2>
+            <h1 class="text-center text-white py-2">Slices Grabbed</h1>
             <div class="container">
                 <div class="row">
                     {{#each pizzas}}
@@ -28,7 +28,7 @@
         </div>
 
         <div class="col-12 col-lg-5 bg-dark pb-3 rounded">
-            <h2 class="text-center text-white py-2">Slices Eaten</h2>
+            <h1 class="text-center text-white py-2">Slices Eaten</h1>
             <div class="container">
                 <div class="row">
                     {{#each pizzas}}
@@ -47,6 +47,22 @@
                     {{/each}}
                 </div>
             </div>
+        </div>
+
+        <div class="col-12 col-lg-8 bg-dark text-white rounded my-3 pt-3">
+            <h1 class="text-center">Enter A Pizza</h1>
+            <form class="new-pizza-form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <textarea class="form-control bg-warning text-dark" id="newPizza" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 col-md-4 mt-2 my-md-auto">
+                            <button type="submit" class="btn btn-lg btn-block btn-danger"><h2>Grab A Slice!</h2></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
