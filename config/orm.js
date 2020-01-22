@@ -25,8 +25,18 @@ var orm = {
         connection.query(
             "UPDATE ?? SET ?? = ? WHERE ?? = ?",
             [table, columnToUpdate, updatedValue, identifierColumn, identifier],
-            function(err,res){
+            function(err, res){
                 if (err) throw err;
+                cb(res);
+            }
+        );
+    },
+    deleteOne: function(table, identifierColumn, identifier, cb){
+        connection.query(
+            "DELETE FROM ?? WHERE ?? = ?",
+            [table, identifierColumn, identifier],
+            function(err, res){
+                if(err) throw err;
                 cb(res);
             }
         );

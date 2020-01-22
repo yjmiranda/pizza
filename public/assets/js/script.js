@@ -21,6 +21,16 @@ $(function(){
         });
     });
 
+    $(".delete").on("click",function(event){
+        var id = $(this).data("id");
+
+        $.ajax("/api/pizzas/" + id, {
+            type: "DELETE"
+        }).then(function(){
+            location.reload();
+        });
+    });
+
     $(".new-pizza-form").on("submit", function(event){
         event.preventDefault();
 
@@ -31,7 +41,7 @@ $(function(){
         $.ajax("/api/pizzas",{
             type: "POST",
             data: newPizza
-        }).then(function(){
+        }).then(function(res){
             location.reload();
         });
     });

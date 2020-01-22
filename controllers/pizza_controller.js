@@ -8,7 +8,6 @@ router.get("/", function(req, res){
             pizzas: data
         };
 
-        console.log(handlerbarsObject);
         res.render("index", handlerbarsObject);
     });
 });
@@ -21,6 +20,12 @@ router.put("/api/pizzas/:id", function(req, res){
         } else {
             res.status(200).end();
         }
+    });
+});
+
+router.delete("/api/pizzas/:id", function(req, res){
+    pizza.deleteOne("id", req.params.id, function(result){
+        res.status(200).end();
     });
 });
 

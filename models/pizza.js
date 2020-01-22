@@ -15,6 +15,11 @@ var pizza = {
         orm.updateOne("pizzas",columnToUpdate, updatedValue, identifierColumn, identifier, function(res){
             cb(res);
         });
+    },
+    deleteOne: function(identifierColumn, identifier, cb){
+        orm.deleteOne("pizzas", identifierColumn, identifier, function(res){
+            cb(res);
+        });
     }
 };
 
