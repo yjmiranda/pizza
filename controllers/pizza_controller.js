@@ -24,4 +24,10 @@ router.put("/api/pizzas/:id", function(req, res){
     });
 });
 
+router.post("/api/pizzas", function(req, res){
+    pizza.isertOne("pizza_name", req.body.pizza_name, function(data){
+        res.json(data);
+    })
+});
+
 module.exports = router;

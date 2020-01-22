@@ -20,4 +20,19 @@ $(function(){
             location.reload();
         });
     });
+
+    $(".new-pizza-form").on("submit", function(event){
+        event.preventDefault();
+
+        var newPizza = {
+            pizza_name: $("#newPizza").val().trim()
+        };
+
+        $.ajax("/api/pizzas",{
+            type: "POST",
+            data: newPizza
+        }).then(function(){
+            location.reload();
+        });
+    });
 });
